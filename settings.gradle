@@ -1,0 +1,6 @@
+include ':utils'
+include ':domain'
+include ':presentation'
+include ':data'
+include ':app'
+rootProject.name = "Spotify Project"
