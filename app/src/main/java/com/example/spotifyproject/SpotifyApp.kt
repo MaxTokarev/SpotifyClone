@@ -43,7 +43,9 @@ class SpotifyApp : Application(), HasAndroidInjector {
     }
 
     private fun provideUtilsComponent(): UtilsComponent {
-        return DaggerUtilsComponent.builder().application(this).build()
+        return DaggerUtilsComponent.builder()
+            .application(this)
+            .build()
     }
 
     private fun provideDomainComponent(): DomainComponent {

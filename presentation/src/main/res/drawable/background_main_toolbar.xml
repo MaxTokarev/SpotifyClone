@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <color android:color="@color/background_splash" />
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="16dp"
+                android:bottomRightRadius="16dp" />
+            <solid android:color="@color/main_lighter" />
+        </shape>
+    </item>
+
+</layer-list>

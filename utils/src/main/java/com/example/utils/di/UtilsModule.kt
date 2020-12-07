@@ -13,9 +13,6 @@ abstract class UtilsModule {
     @Binds
     abstract fun bindContext(application: Application): Context
 
-    @Binds
-    abstract fun bindApplicationContext(application: Application): Context
-
     @Module
     companion object {
         @Provides

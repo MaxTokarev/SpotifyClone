@@ -1,4 +1,4 @@
-package com.example.presentation.ui
+package com.example.presentation.screens.main.search
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,6 @@ import android.view.ViewGroup
 import com.example.presentation.R
 
 
-class LoginFragment : Fragment(R.layout.fragment_login) {
+class SearchFragment : Fragment(R.layout.fragment_search) {
 
 }

@@ -1,6 +1,5 @@
-package com.example.presentation.ui
+package com.example.presentation.screens.splash
 
-import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -9,25 +8,28 @@ import androidx.fragment.app.Fragment
 import com.example.presentation.R
 import com.example.presentation.databinding.FragmentSplashBinding
 import com.example.presentation.helpers.viewBinding
+import com.example.presentation.screens.login.LoginFragment
 import dagger.android.support.AndroidSupportInjection
-import javax.inject.Inject
 
 class SplashFragment : Fragment(R.layout.fragment_splash) {
 
-    @Inject
-    lateinit var string: String
     private val binding by viewBinding(FragmentSplashBinding::bind)
 
-    override fun onAttach(context: Context) {
+    private lateinit var router: SplashRouter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         AndroidSupportInjection.inject(this)
-        super.onAttach(context)
+        super.onCreate(savedInstanceState)
+
+        router = SplashRouter(this)
+        Handler(Looper.getMainLooper()).postDelayed({
+            router.routeToMain()
+        },2200)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            binding.tvShit.text = string
-        }, 1000)
     }
 }

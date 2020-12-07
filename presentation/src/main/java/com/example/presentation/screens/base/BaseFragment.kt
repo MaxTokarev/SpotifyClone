@@ -1,14 +1,12 @@
-package com.example.presentation.ui
+package com.example.presentation.screens.base
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import com.example.presentation.R
 
 
-class MainFragment : Fragment(R.layout.fragment_main) {
+class BaseFragment : Fragment(R.layout.fragment_base) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
