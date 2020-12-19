@@ -1,10 +1,9 @@
 package com.example.data.di.modules
 
 import com.example.data.BuildConfig
-import com.example.data.helpers.Constants
-import com.example.data.helpers.Constants.baseUrl
 import com.example.data.network.AuthApi
 import com.example.data.network.SpotifyApi
+import com.example.utils.Constants.baseUrl
 import dagger.Module
 import dagger.Provides
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
@@ -70,7 +69,7 @@ class NetworkModule {
         gsonConverterFactory: GsonConverterFactory,
         rxJava3CallAdapterFactory: RxJava3CallAdapterFactory
     ): AuthApi {
-        return Retrofit.Builder().baseUrl(Constants.authUrl)
+        return Retrofit.Builder().baseUrl(com.example.utils.Constants.authUrl)
             .addCallAdapterFactory(rxJava3CallAdapterFactory)
             .addConverterFactory(gsonConverterFactory)
             .client(okHttpClient)

@@ -1,4 +1,4 @@
-package com.example.data.helpers
+package com.example.utils
 
 object Constants {
     const val baseUrl = "https://api.spotify.com/v1/"
