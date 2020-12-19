@@ -1,3 +1,4 @@
+include ':spotify-app-remote'
 include ':utils'
 include ':domain'
 include ':presentation'
