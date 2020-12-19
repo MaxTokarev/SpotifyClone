@@ -2,10 +2,8 @@ package com.example.presentation.screens.main
 
 import android.os.Bundle
 import android.view.View
-import androidx.databinding.DataBindingUtil.bind
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.presentation.R
 import com.example.presentation.databinding.FragmentMainBinding
@@ -24,5 +22,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         NavigationUI
             .setupWithNavController(binding.bottomNavigationView, navHostFragment.navController)
+        binding.bottomNavigationView.itemIconTintList = null
     }
 }

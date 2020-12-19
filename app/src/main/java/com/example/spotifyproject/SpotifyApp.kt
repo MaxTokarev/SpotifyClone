@@ -55,6 +55,7 @@ class SpotifyApp : Application(), HasAndroidInjector {
 
     private fun provideDataComponent(): DataComponent {
         return DaggerDataComponent.builder()
+            .application(this)
             .build()
     }
 

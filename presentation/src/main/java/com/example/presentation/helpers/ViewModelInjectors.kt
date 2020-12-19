@@ -9,6 +9,6 @@ inline fun <reified T : ViewModel> FragmentActivity.injectViewModel(factory: Vie
     return ViewModelProvider(this, factory).get(T::class.java)
 }
 
-inline fun <reified T:ViewModel> Fragment.injectViewModel(factory: ViewModelProvider.Factory):T{
+inline fun <reified T : ViewModel> Fragment.injectViewModel(factory: ViewModelProvider.Factory): T {
     return ViewModelProvider(this, factory).get(T::class.java)
 }

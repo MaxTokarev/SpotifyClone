@@ -2,10 +2,14 @@ package com.example.spotifyproject.di
 
 import android.app.Application
 import com.example.data.di.DataComponent
+import com.example.data.di.modules.DatabaseModule
+import com.example.data.di.modules.NetworkModule
 import com.example.domain.di.DomainComponent
 import com.example.presentation.di.PresentationComponent
 import com.example.presentation.di.ViewModelModule
 import com.example.presentation.di.module.ScreenBindingModule
+import com.example.presentation.screens.login.LoginModule
+import com.example.presentation.screens.splash.SplashModule
 import com.example.spotifyproject.SpotifyApp
 import com.example.spotifyproject.di.modules.ActivityBindingModule
 import com.example.utils.di.UtilsComponent
@@ -20,9 +24,18 @@ import dagger.android.AndroidInjector
         AndroidInjectionModule::class,
         ActivityBindingModule::class,
         ScreenBindingModule::class,
-        ViewModelModule::class
+        ViewModelModule::class,
+        NetworkModule::class,
+        LoginModule::class,
+        DatabaseModule::class,
+        SplashModule::class
     ],
-    dependencies = [PresentationComponent::class, UtilsComponent::class, DomainComponent::class, DataComponent::class]
+    dependencies = [
+        PresentationComponent::class,
+        UtilsComponent::class,
+        DomainComponent::class,
+        DataComponent::class]
+
 )
 interface AppComponent : AndroidInjector<SpotifyApp> {
 

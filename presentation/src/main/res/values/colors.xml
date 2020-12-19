@@ -11,4 +11,5 @@
     <color name="background_splash">#FF1B262C</color>
     <color name="main_lighter">#293942</color>
     <color name="purple">#7971E9</color>
+    <color name="gray">#707070</color>
 </resources>

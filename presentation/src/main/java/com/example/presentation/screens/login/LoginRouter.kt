@@ -5,8 +5,7 @@ import com.example.presentation.R
 
 interface LoginRoutingLogic {
     fun routeToMain()
-
-    fun routeToRegister()
+    fun routeToDemoView()
 }
 
 class LoginRouter(val fragment: LoginFragment) : LoginRoutingLogic {
@@ -16,8 +15,8 @@ class LoginRouter(val fragment: LoginFragment) : LoginRoutingLogic {
             .navigate(R.id.action_splashFragment_to_mainFragment)
     }
 
-    override fun routeToRegister() {
-        TODO("Not yet implemented")
+    override fun routeToDemoView() {
+        //TODO
     }
 
 }

@@ -14,4 +14,9 @@
     <string name="titleHomeFragment">Home</string>
     <string name="tittleSearch">Search</string>
     <string name="titleLibrary">Library</string>
+    <string name="login_welcome">Welcome!</string>
+    <string name="login_or">OR</string>
+    <string name="login_sign_in">Sign In</string>
+    <string name="login_demo_login">Demo login</string>
+    <string name="login_with_spotify">Please login with your Spotify account to continue</string>
 </resources>
